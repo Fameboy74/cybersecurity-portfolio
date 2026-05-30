@@ -1,0 +1,26 @@
+[
+  {
+    "severity": "HIGH",
+    "vuln": "SQL Injection",
+    "url": "http://127.0.0.1:5000/login",
+    "detail": "Payload: ' OR 1=1--"
+  },
+  {
+    "severity": "HIGH",
+    "vuln": "Reflected XSS",
+    "url": "http://127.0.0.1:5000/search",
+    "detail": "Payload reflected: <script>alert(1)</script>"
+  },
+  {
+    "severity": "MED",
+    "vuln": "IDOR",
+    "url": "http://127.0.0.1:5000/profile/1",
+    "detail": "Unauthenticated access: ID:1  User:admin  Role:admin"
+  },
+  {
+    "severity": "MED",
+    "vuln": "IDOR",
+    "url": "http://127.0.0.1:5000/profile/2",
+    "detail": "Unauthenticated access: ID:2  User:alice  Role:user"
+  }
+]
